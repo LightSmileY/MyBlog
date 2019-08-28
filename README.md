@@ -1,29 +1,70 @@
-# app
+# 袁乾峰的个人博客
 
-## Project setup
+
+
+## 一、关于blog
+
+### 简介
+
+​		这是一个自主设计和实现的偏文艺风的个人博客，是一个单页面web应用。包含首页、技术分享、韶华追忆、心情随笔、我的时光轴、留言、个人中心、帖子详情页、登录、注册等模块。目的是为了分享自己在软件开发技术学习和实践过程中的一些见解，以及对生活的一些感悟，记录自己有意义的学习生活并分享给网友们，希望对网友们有所帮助。在博客中，用户可浏览博客内的文章，注册并登录后可进行文章的点赞、评论以及给我留言。
+
+### 技术架构
+
+​		该项目整体采用的是JavaScript技术栈。
+
+​		前端采用了流行框架Vue，UI组件库element，以及路由vue-router、状态管理vuex、css预处理语言scss、http请求库axios等重要插件。
+
+​		后端采用的是node.js框架Koa2，以及rest风格接口插件koa-router、MongoDB数据库操作插件mongoose等。
+
+​		数据库采用的是新型且当前流行的非关系型数据库MongoDB。
+
+## 二、运行
+
+#### （安装node.js环境，克隆或下载代码包）
+
+
+
+### 前端(app)
+
+#### 进入app目录下
+
+##### 安装依赖包
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+##### 开发时运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+编译运行成功后，浏览器输入[http://localhost:8080](http://localhost:8080/)进行访问
+
+##### 打包项目
+
 ```
 npm run build
 ```
 
-### Run your tests
+打包构建完成后该目录中生成dist文件夹，可直接打开dist中的index.html运行
+
+
+
+### 服务端(serve)
+
+#### 进入serve目录下
+
+##### 安装依赖包
+
 ```
-npm run test
+npm install
 ```
 
-### Lints and fixes files
+##### 开发时运行
+
 ```
-npm run lint
+npm run dev
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+默认端口号3000
