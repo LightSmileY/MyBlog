@@ -1,0 +1,27 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#timeAxis{
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px 50px;
+  }
+
+  .title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    border-bottom: 2px solid #D7D7D7;
+    text-shadow: 2px 2px 3px #444444;
+  }
+
+  .timeAxis-main{
+    margin: 20px 0;
+    width: 100%;
+  }
+}

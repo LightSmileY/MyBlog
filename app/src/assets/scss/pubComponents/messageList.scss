@@ -1,0 +1,53 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#messageList{
+  .messageList-li{
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px #4FB9E9;
+
+    .myInfo{
+      height: 50px;
+      display: flex;
+      margin-bottom: 10px;
+
+      .avatar{
+        width: 48px;
+        height: 48px;
+        border: 1px solid #DBDBDB;
+        border-radius: 50%;
+        margin: 0 8px 0 0;
+
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .myInfo-name-time{
+        height: 100%;
+        margin: 0;
+
+        .myInfo-name{
+          font-size: 17px;
+          line-height: 30px;
+        }
+        .myInfo-time{
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
+    .words{
+      font-size: 17px;
+      line-height: 25px;
+      color: #595959;
+    }
+  }
+}

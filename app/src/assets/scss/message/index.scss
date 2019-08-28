@@ -1,0 +1,60 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#message{
+  min-height: 440px;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    max-width: 900px;
+    min-height: 500px;
+    width: 100%;
+    padding: 20px 50px;
+
+    .title {
+      height: 50px;
+      line-height: 50px;
+      font-size: 22px;
+      border-bottom: 1px solid #D7D7D7;
+      text-shadow: 2px 2px 3px #444444;
+    }
+
+    .main{
+      margin: 20px 0;
+
+      .write{
+        height: 150px;
+        
+        .el-textarea{
+          .el-textarea__inner{
+            font-size: 16px;
+            font-family: "微软雅黑";
+          }
+          .el-textarea__inner:focus{
+            box-shadow: 0 0 5px #46B9E5;
+          }
+        }
+        .submit{
+          text-align: right;
+          margin: 10px 20px 0 0;
+
+          .el-button--small{
+            width: 70px;
+          }
+        }
+      }
+      .message-title{
+        font-size: 18px;
+        margin-top: 20px;
+        line-height: 50px;
+        border-bottom: 1px solid #D7D7D7;
+        text-shadow: 2px 2px 3px #444444;
+      }
+      .message-ul{
+        list-style: none;
+        min-height: 200px;
+      }
+    }
+  }
+}

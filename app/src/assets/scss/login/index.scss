@@ -1,0 +1,50 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#login{
+  position: relative;
+  width: 400px;
+  height: 260px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 30px #585858;
+
+  .title{
+    font-size: 20px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .operate{
+    text-align: center;
+    margin-top: 20px;
+
+    .tip{
+      font-size: 14px;
+      text-align: right;
+      margin-top: 15px;
+
+      .words{
+        
+        .link{
+          color: #5F8FEC;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .el-icon-close{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    top: -24px;
+    right: -24px;
+    cursor: pointer;
+  }
+}

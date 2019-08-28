@@ -1,0 +1,37 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#user{
+  text-align: center;
+
+  .title{
+    position: relative;
+    font-size: 22px;
+    text-shadow: 2px 2px 2px #626262;
+    line-height: 70px;
+
+    .add{
+      position: absolute;
+      right: 20%;
+      top: 0;
+    }
+  }
+
+  .el-pagination{
+    margin: 30px;
+  }
+
+  .is-background{
+
+    .btn-prev,
+    .number,
+    .more,
+    .btn-next{
+      background-color: #fff;
+    }
+
+    .active{
+      background-color: #4AB8EA;
+    }
+  }
+}

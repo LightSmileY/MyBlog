@@ -1,0 +1,71 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#navbar {
+  height: 50px;
+  background-color: rgba(109,184,243,.8);
+  @include flex-center(column);
+
+  .navbar-ul {
+    max-width: 1000px;
+    width: 80%;
+    height: 100%;
+    @include flex-center();
+    
+
+    .navbar-li {
+      flex: 1;
+      height: 100%;
+      list-style: none;
+      @include flex-center(column);
+      margin: 0 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    li:hover {
+      background-color: #E9F8FF;
+      transition: border-radius .4s;
+      cursor: pointer;
+      color: #000;
+      border-radius: 50px 0 50px 0;
+    }
+
+    .h-active {
+      color: #000;
+      background-color: #E9F8FF;
+      border-radius: 50px 0 50px 0;
+    }
+  }
+  .login-register{
+    position: absolute;
+    right: 30px;
+    color: #fff;
+
+    span{
+      cursor: pointer;
+    }
+  }
+
+  .welcome{
+    position: absolute;
+    right: 30px;
+    color: #fff;
+    font-size: 13px;
+
+    .username{
+      cursor: pointer;
+    }
+  }
+
+  .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+    z-index: 10000;
+    @include flex-center(column);
+  }
+}

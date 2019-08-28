@@ -1,0 +1,1 @@
+export const USERINFO = 'userInfo'  //用户资料

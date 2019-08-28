@@ -1,0 +1,45 @@
+@import "../public/variables.scss";
+@import "../public/mixins.scss";
+
+#managePage{
+
+  .container{
+    display: flex;
+
+    .navs{
+      height: 600px;
+      flex: 1;
+      min-width: 120px;
+      background-color: #fff;
+      box-sizing: border-box;
+      border-bottom: 1px solid #86DCFF;
+      border-right: 1px solid #86DCFF;
+      @include flex-center(column);
+
+      .nav-item{
+        flex: 1;
+        width: 100%;
+        cursor: pointer;
+        @include flex-center(column);
+
+        #icon{
+          font-size: 35px
+        }
+
+        .name{
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+
+      .nav-item-active{
+        color: #FF6F6F;
+      }
+    }
+
+    .body{
+      flex: 11;
+      padding: 0 50px;
+    }
+  }
+}
