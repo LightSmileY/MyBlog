@@ -16,12 +16,17 @@
   .links-ul{
     margin: 10px 0;
     box-sizing: border-box;
+
     .links-li{
       font-size: 13px;
       cursor: pointer;
       display: inline-block;
       margin-right: 15px;
       color: #6A6A6A;
+    }
+
+    .links-li:hover{
+      color: #F35F5F;
     }
   }
 }

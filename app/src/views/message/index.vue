@@ -68,22 +68,24 @@ export default {
     /*给我留言*/
     message(){
       let _this = this
+      /*检查用户是否已登录*/
       if(_this.$store.state.userInfo.username){
+        /*检查留言输入框是否为空*/
         if(_this.userInfo.message){
           _this.userInfo.username = _this.$store.state.userInfo.username
           _this.userInfo.nickname = _this.$store.state.userInfo.nickname
           _this.userInfo.time = getDate()
-          addMessage(_this.userInfo).
-          then(res => {
+          addMessage(_this.userInfo)  /*调用函数并传递对象参数userInfo*/
+          .then(res => {  /*请求成功*/
             console.log(res)
             if(res.data.code === 0){
               _this.success()
-              _this.getMessageList()
+              _this.getMessageList()  /*获取最新留言列表*/
             }else{
               _this.fail()
             }
           })
-          .catch(() => {
+          .catch(() => {  /*请求失败*/
             _this.fail()
           })
         }else{

@@ -58,6 +58,6 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
 });
 
-console.log('Koa2服务正在3000端口运行...')
+console.log('Koa2服务正在3029端口运行...')
 
 module.exports = app

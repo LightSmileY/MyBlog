@@ -130,29 +130,8 @@
           v-loading="loading"
           element-loading-text="玩命加载中"
           element-loading-background="rgba(255, 255, 255, 0)">
-            <li>
-              <el-tag type="danger">{{myProfile.tags[0]}}~</el-tag>
-            </li>
-            <li>
-              <el-tag type="success">{{myProfile.tags[1]}}</el-tag>
-            </li>
-            <li>
-              <el-tag type="info">{{myProfile.tags[2]}}</el-tag>
-            </li>
-            <li>
-              <el-tag>{{myProfile.tags[3]}}</el-tag>
-            </li>
-            <li>
-              <el-tag>{{myProfile.tags[4]}}</el-tag>
-            </li>
-            <li>
-              <el-tag type="info">{{myProfile.tags[5]}}</el-tag>
-            </li>
-            <li>
-              <el-tag type="success">{{myProfile.tags[6]}}</el-tag>
-            </li>
-            <li>
-              <el-tag type="warning">{{myProfile.tags[7]}}</el-tag>
+            <li v-for="item in myProfile.tags">
+              <el-tag :type="item.type">{{item.title}}</el-tag>
             </li>
           </ul>
         </div>

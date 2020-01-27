@@ -8,8 +8,9 @@
           element-loading-text="玩命加载中"
           element-loading-background="rgba(255, 255, 255, 0)">
             <el-carousel :interval="4000" type="card" height="180px">
-              <el-carousel-item v-for="item in articleList.slice(0,6)">
-                <img :src="item.body[0].image">
+              <el-carousel-item 
+              v-for="(item,index) in articleList.slice(0,6)">
+                <img :src="item.body[0].image" @click="toArticleDetaiPage(index)">
               </el-carousel-item>
             </el-carousel>
           </div>
@@ -67,6 +68,15 @@ export default {
     AttentMe,
     NewArticles,
     Links
+  },
+  methods: {
+    toArticleDetaiPage(i){
+      let _this = this
+      this.$router.push({
+        name:'ArticleDetail', 
+        query: { title: _this.articleList[i].title }
+      })
+    }
   },
   beforeMount(){
     let _this = this

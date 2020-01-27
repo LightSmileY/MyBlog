@@ -1,8 +1,8 @@
 <template>
   <div id="articleList">
     <li class="articleList-li" v-for="(item, index) in arrayList" :key="index">
-      <div class="image" @click="toArticleDetaiPage">
-        <img :src="item.body[0].image"/>
+      <div class="image" @click="toArticleDetaiPage(index)">
+        <img :src="item.body[index].image"/>
       </div>
       <dl class="articleList-dl">
         <dt class="articleList-dt" @click="toArticleDetaiPage(index)">{{item.title}}</dt>

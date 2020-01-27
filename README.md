@@ -2,6 +2,8 @@
 
 
 
+
+
 ## 一、关于blog
 
 ### 简介
@@ -10,13 +12,14 @@
 
 ### 技术架构
 
-​		该项目整体采用的是JavaScript技术栈。
+- 该项目整体采用的是JavaScript技术栈。
+- 前端采用了流行框架Vue，UI组件库element，以及路由vue-router、状态管理vuex、css预处理语言scss、http请求库axios等重要插件。
+- 后端采用的是node.js框架Koa2，以及rest风格接口插件koa-router、MongoDB数据库操作插件mongoose等。
+- 数据库采用的是新型且当前流行的非关系型数据库MongoDB。
 
-​		前端采用了流行框架Vue，UI组件库element，以及路由vue-router、状态管理vuex、css预处理语言scss、http请求库axios等重要插件。
 
-​		后端采用的是node.js框架Koa2，以及rest风格接口插件koa-router、MongoDB数据库操作插件mongoose等。
 
-​		数据库采用的是新型且当前流行的非关系型数据库MongoDB。
+
 
 ## 二、运行
 
@@ -24,24 +27,27 @@
 
 
 
+
+
 ### 前端(app)
 
 #### 进入app目录下
 
-##### 安装依赖包
+- ##### 安装依赖包
 
 ```
 npm install
 ```
 
-##### 开发时运行
+- ##### 开发时运行
+
 ```
 npm run serve
 ```
 
 编译运行成功后，浏览器输入[http://localhost:8080](http://localhost:8080/)进行访问
 
-##### 打包项目
+- ##### 打包项目
 
 ```
 npm run build
@@ -55,13 +61,13 @@ npm run build
 
 #### 进入serve目录下
 
-##### 安装依赖包
+- ##### 安装依赖包
 
 ```
 npm install
 ```
 
-##### 开发时运行
+- ##### 开发时运行
 
 ```
 npm run dev

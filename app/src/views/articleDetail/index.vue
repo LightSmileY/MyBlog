@@ -21,8 +21,10 @@
           </div>
           <div class="body">
             <li class="p-img" v-for="item in article.body">
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.para}}</p>
-              <img :src="item.image">
+              <p>{{item.para}}</p>
+              <div v-if="item.image">
+                <img :src="item.image">
+              </div>
             </li>
           </div>
           <div class="operate">
@@ -152,7 +154,7 @@ export default {
         _this.messageList = res.data.article.comments.reverse()
         _this.loading1 = false
         for(let i in _this.article.likes){
-          if(_this.article.likes[i] = _this.$store.state.userInfo.username){
+          if(_this.article.likes[i] == _this.$store.state.userInfo.username){
             _this.likeIcon = LikeActive
           }
         }
@@ -167,7 +169,7 @@ export default {
           type: 'error'
         });
       }else{
-        if(this.likeIcon == LikeActive){
+        if(this.likeIcon === LikeActive){
           this.$message({
             message: '已点过赞~',
             type: 'error'
@@ -182,6 +184,7 @@ export default {
           .then(res => {
             console.log(res)
             _this.likeIcon = LikeActive
+            _this.article.likes.length ++
             _this.$message({
               message: res.data.msg,
               type: 'success'
